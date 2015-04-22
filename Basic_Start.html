@@ -15,6 +15,16 @@
       });
       
       function getData() {
+				$.ajax({
+					url: "testhtmldata.html",
+					type: "GET",
+					datatype: "html"
+				}) //end $.ajax
+				.done(successFn)
+				.fail(errorFn)
+				.always(function(data, textStatus, jqXHR) {
+					console.log("The request is complete!");
+				}); //end always
       }
       
       function successFn(result) {
