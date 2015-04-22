@@ -15,16 +15,7 @@
       });
       
       function getData() {
-				$.ajax({
-					url: "testdata.txt",
-					type: "GET",
-					datatype: "text"
-				}) //end $.ajax
-				.done(successFn)
-				.fail(errorFn)
-				.always(function(data, textStatus, jqXHR) {
-					console.log("The request is complete!");
-				}); //end always
+				$.get("testdata.txt", successFn);
       }
       
       function successFn(result) {
@@ -32,7 +23,7 @@
       	$("#content").append(result);
       }
       function errorFn(xhr, status, strErr) {
-        console.log("There was an error!");
+        alert(strErr);
       }
   </script>
 </head>
