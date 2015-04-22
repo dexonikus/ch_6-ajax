@@ -15,7 +15,8 @@
       });
       
       function getData() {
-				$.get("testdata.txt", successFn);
+				//$.get("testdata.txt", successFn);
+				$("#content").load("testdata.html");
       }
       
       function successFn(result) {
